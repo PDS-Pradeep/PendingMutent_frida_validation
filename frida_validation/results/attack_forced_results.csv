@@ -1,0 +1,14 @@
+category,rank,package,pi_captured,A,B,C
+v1,1,com.github.meypod.al_azan,279,EXECUTED,EXECUTED,EXECUTED
+v1,2,me.tagavari.airmessage,3,EXECUTED,EXECUTED,EXECUTED
+v1,3,com.pedronveloso.a11ybutton,1,NULL_PENDING_INTENT,NULL_PENDING_INTENT,NULL_PENDING_INTENT
+v1,4,org.secuso.aktivpause,0,NO_DATA,NO_DATA,NO_DATA
+v1,5,host.stjin.anonaddy,1,NULL_PENDING_INTENT,NULL_PENDING_INTENT,NULL_PENDING_INTENT
+v2,1,com.tughi.aggregator,0,NO_DATA,NO_DATA,NO_DATA
+v2,2,dev.ukanth.ufirewall,1,EXECUTED,EXECUTED,EXECUTED
+v2,3,com.shapeshed.aerial,2,EXECUTED,EXECUTED,EXECUTED
+v2,4,com.acutis.firewall,0,NO_DATA,NO_DATA,NO_DATA
+v2,5,info.metadude.android.congress.schedule,1,EXECUTED,EXECUTED,EXECUTED
+v3,1,com.adguard.android.contentblocker,61,EXECUTED,EXECUTED,EXECUTED
+v3,2,org.secuso.privacyfriendly2048,0,NO_DATA,NO_DATA,NO_DATA
+v3,3,com.newoether.agora,1,NULL_PENDING_INTENT,NULL_PENDING_INTENT,NULL_PENDING_INTENT

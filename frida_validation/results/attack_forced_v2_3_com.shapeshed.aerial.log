@@ -1,0 +1,39 @@
+Spawned `com.shapeshed.aerial`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 6304
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=6304
+{"timestamp":"2026-08-24T16:32:11.403Z","pid":6304,"event":"PI_CAPTURED","data":{"api":"getActivity","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10177 | targetPackage=com.shapeshed.aerial"}}
+{"timestamp":"2026-08-24T16:32:11.493Z","pid":6304,"event":"ATTACK_RESULTS","data":{"api":"getActivity","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10177 | targetPackage=com.shapeshed.aerial","results":[{"attack":"A_fillin_injection","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"C_cancel_hijack","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"cancel() completed without SecurityException from attacker context"}]}}
+{"timestamp":"2026-08-24T16:32:11.536Z","pid":6304,"event":"PI_CAPTURED","data":{"api":"getForegroundService","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10177 | targetPackage=com.shapeshed.aerial"}}
+{"timestamp":"2026-08-24T16:32:11.555Z","pid":6304,"event":"ATTACK_RESULTS","data":{"api":"getForegroundService","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10177 | targetPackage=com.shapeshed.aerial","results":[{"attack":"A_fillin_injection","api":"getForegroundService","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getForegroundService","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"C_cancel_hijack","api":"getForegroundService","status":"EXECUTED_NO_EXCEPTION","detail":"cancel() completed without SecurityException from attacker context"}]}}
+{"timestamp":"2026-08-24T16:32:11.649Z","pid":6304,"event":"FORCER_INFO","data":{"detail":"no FORCE_TARGETS configured for package=com.shapeshed.aerial"}}
+Process crashed: Trace/BPT trap
+
+***
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'google/sdk_gphone_x86_64/generic_x86_64_arm64:11/RSR1.240422.006/12134477:userdebug/dev-keys'
+Revision: '0'
+ABI: 'x86_64'
+Timestamp: 2026-08-24 22:02:14+0530
+pid: 6304, tid: 6331, name: RenderThread  >>> com.shapeshed.aerial <<<
+uid: 10177
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+Abort message: 'GL errors! frameworks/base/libs/hwui/pipeline/skia/SkiaOpenGLPipeline.cpp:127'
+    rax 0000000000000000  rbx 00000000000018a0  rcx 0000779531a5e298  rdx 0000000000000006
+    r8  0000000000000000  r9  0000000000000000  r10 0000779245525320  r11 0000000000000246
+    r12 000000000000000b  r13 0000000000000001  r14 0000779245525318  r15 00000000000018bb
+    rdi 00000000000018a0  rsi 00000000000018bb
+    rbp 00007792c0fa7db0  rsp 0000779245525308  rip 0000779531a5e298
+backtrace:
+      #00 pc 000000000005a298  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+24) (BuildId: edf0af8d613e7bdf6a416ec8f4edeb0d)
+      #01 pc 000000000005d202  /apex/com.android.runtime/lib64/bionic/libc.so!libc.so (offset 0x5c000) (abort+194) (BuildId: edf0af8d613e7bdf6a416ec8f4edeb0d)
+      #02 pc 0000000000000523  <anonymous:779531427000>
+***

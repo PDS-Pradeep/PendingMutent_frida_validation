@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  VictimApp - research/test fixture only.
+
+  Simulates a realistic PendingIntent leak: creates a MUTABLE PendingIntent
+  wrapping a "sensitive" broadcast action, then leaks it to any listener via
+  an unprotected broadcast (no signature/permission). This mirrors the
+  common real-world pattern of an app handing a PendingIntent to a
+  third-party SDK/library, or a badly-scoped inter-app broadcast, without
+  restricting who can receive it.
+
+  DO NOT ship this manifest pattern in a production app. exported=true with
+  no permission on PI_LEAK_ACTION is the vulnerability under test.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.research.pivictim">
+
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30" />
+
+    <application
+        android:label="PI Victim (research)"
+        android:allowBackup="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- The receiver the leaked PendingIntent actually targets. Executing
+             this represents the "privileged operation" an attacker gains by
+             replaying/redirecting the PendingIntent. -->
+        <receiver
+            android:name=".SensitiveActionReceiver"
+            android:exported="false" />
+
+        <!-- Benign redirection target for Attack E (disruption via
+             redirect). exported=false: only reachable via a fill-in
+             Intent's setComponent() on the already-leaked PendingIntent,
+             exactly like SensitiveActionReceiver is, not via a direct
+             external broadcast. -->
+        <receiver
+            android:name=".DecoyReceiver"
+            android:exported="false" />
+
+    </application>
+</manifest>

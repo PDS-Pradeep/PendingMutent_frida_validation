@@ -1,0 +1,13 @@
+Spawned `com.newoether.agora`. Resuming main thread!
+==========================================
+[+] PendingIntent Defense Simulator (reference ownership gate)
+[+] Target process: 16534
+==========================================
+[+] Hooked+gating PendingIntent.getActivity
+[+] Hooked+gating PendingIntent.getActivities
+[+] Hooked+gating PendingIntent.getBroadcast
+[+] Hooked+gating PendingIntent.getService
+[+] Hooked+gating PendingIntent.getForegroundService
+[+] Defense gate ready - attacks fire and are evaluated against the ownership policy on every PendingIntent creation
+{"timestamp":"2026-08-23T16:11:57.314Z","pid":16534,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null"}}
+{"timestamp":"2026-08-23T16:11:57.315Z","pid":16534,"event":"DEFENSE_RESULTS","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null","results":[{"attack":"A_fillin_injection","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to gate"},{"attack":"B_privilege_escalation","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to gate"},{"attack":"C_cancel_hijack","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to gate"}]}}

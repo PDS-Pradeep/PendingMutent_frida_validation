@@ -1,0 +1,12 @@
+Spawned `dev.ukanth.ufirewall`. Resuming main thread!
+==========================================
+[+] PendingIntent Defense Simulator (reference ownership gate)
+[+] Target process: 14026
+==========================================
+[+] Hooked+gating PendingIntent.getActivity
+[+] Hooked+gating PendingIntent.getActivities
+[+] Hooked+gating PendingIntent.getBroadcast
+[+] Hooked+gating PendingIntent.getService
+[+] Hooked+gating PendingIntent.getForegroundService
+[+] Defense gate ready - attacks fire and are evaluated against the ownership policy on every PendingIntent creation
+Process terminated

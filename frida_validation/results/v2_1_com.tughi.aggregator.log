@@ -1,0 +1,11 @@
+Spawned `com.tughi.aggregator`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 11561
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation

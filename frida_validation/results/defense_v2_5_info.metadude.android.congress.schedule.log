@@ -1,0 +1,13 @@
+Spawned `info.metadude.android.congress.schedule`. Resuming main thread!
+==========================================
+[+] PendingIntent Defense Simulator (reference ownership gate)
+[+] Target process: 14610
+==========================================
+[+] Hooked+gating PendingIntent.getActivity
+[+] Hooked+gating PendingIntent.getActivities
+[+] Hooked+gating PendingIntent.getBroadcast
+[+] Hooked+gating PendingIntent.getService
+[+] Hooked+gating PendingIntent.getForegroundService
+[+] Defense gate ready - attacks fire and are evaluated against the ownership policy on every PendingIntent creation
+{"timestamp":"2026-08-22T18:53:59.713Z","pid":14610,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=info.metadude.android.congress.schedule | creatorUid=10242 | targetPackage=info.metadude.android.congress.schedule"}}
+{"timestamp":"2026-08-22T18:53:59.723Z","pid":14610,"event":"DEFENSE_RESULTS","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=info.metadude.android.congress.schedule | creatorUid=10242 | targetPackage=info.metadude.android.congress.schedule","results":[{"attack":"A_fillin_injection","api":"getBroadcast","authorization":{"decision":"DENY","reason":"invoker (com.malware.simulated) is not the creator (info.metadude.android.congress.schedule) for ownership-sensitive operation 'fillin_redirect'"},"status":"BLOCKED_BY_POLICY","detail":"gate denied fill-in redirection before reaching PendingIntent.send(); invoker (com.malware.simulated) is not the creator (info.metadude.android.congress.schedule) for ownership-sensitive operation 'fillin_redirect'"},{"attack":"B_privilege_escalation","api":"getBroadcast","authorization":{"decision":"DENY","reason":"invoker (com.malware.simulated) is not the creator (info.metadude.android.congress.schedule) for ownership-sensitive operation 'invoke_send'"},"status":"BLOCKED_BY_POLICY","detail":"gate denied send() invocation before reaching PendingIntent.send(); invoker (com.malware.simulated) is not the creator (info.metadude.android.congress.schedule) for ownership-sensitive operation 'invoke_send'"},{"attack":"C_cancel_hijack","api":"getBroadcast","authorization":{"decision":"DENY","reason":"invoker (com.malware.simulated) is not the creator (info.metadude.android.congress.schedule) for ownership-sensitive operation 'cancel'"},"status":"BLOCKED_BY_POLICY","detail":"gate denied cancel() before reaching PendingIntent.cancel(); invoker (com.malware.simulated) is not the creator (info.metadude.android.congress.schedule) for ownership-sensitive operation 'cancel'"}],"falsePositiveCheck":{"results":{"fillin_redirect":"ALLOW","invoke_send":"ALLOW","cancel":"ALLOW"},"allAllowed":true}}}

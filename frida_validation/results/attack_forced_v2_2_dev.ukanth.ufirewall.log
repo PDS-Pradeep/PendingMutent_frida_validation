@@ -1,0 +1,19 @@
+Spawned `dev.ukanth.ufirewall`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 6035
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=6035
+{"timestamp":"2026-08-24T16:31:40.985Z","pid":6035,"event":"FORCER_INFO","data":{"detail":"forcing 3 call site(s) for dev.ukanth.ufirewall"}}
+{"timestamp":"2026-08-24T16:31:41.004Z","pid":6035,"event":"FORCE_ATTEMPT","data":{"package":"dev.ukanth.ufirewall","className":"dev.ukanth.ufirewall.widget.ToggleWidget","methodName":"onUpdate","status":"STATIC_CALL_FAILED","detail":"Error: expected a pointer"}}
+{"timestamp":"2026-08-24T16:31:41.017Z","pid":6035,"event":"FORCE_ATTEMPT","data":{"package":"dev.ukanth.ufirewall","className":"dev.ukanth.ufirewall.widget.StatusWidget","methodName":"showSuccessState","status":"STATIC_CALL_FAILED","detail":"Error: expected a pointer"}}
+{"timestamp":"2026-08-24T16:31:41.091Z","pid":6035,"event":"PI_CAPTURED","data":{"api":"getActivity","pendingIntent":"creatorPackage=dev.ukanth.ufirewall | creatorUid=10172 | targetPackage=dev.ukanth.ufirewall"}}
+{"timestamp":"2026-08-24T16:31:41.209Z","pid":6035,"event":"ATTACK_RESULTS","data":{"api":"getActivity","pendingIntent":"creatorPackage=dev.ukanth.ufirewall | creatorUid=10172 | targetPackage=dev.ukanth.ufirewall","results":[{"attack":"A_fillin_injection","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"C_cancel_hijack","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"cancel() completed without SecurityException from attacker context"}]}}
+{"timestamp":"2026-08-24T16:31:41.237Z","pid":6035,"event":"FORCE_ATTEMPT","data":{"package":"dev.ukanth.ufirewall","className":"dev.ukanth.ufirewall.Api","methodName":"updateNotification","status":"STATIC_CALL_OK","argCount":2}}
+Process crashed: Trace/BPT trap

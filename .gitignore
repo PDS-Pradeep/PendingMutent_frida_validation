@@ -1,0 +1,39 @@
+# Full downloaded APK corpus - large binary corpus, not source code.
+# Only android_repositories/pendingintent_analysis/selected_13/ (the 13
+# dynamically-tested candidate APKs) is intentionally tracked - see the
+# negation rules below.
+android_repositories/fdroid_main/
+android_repositories/fdroid_archive/
+android_repositories/izzyondroid/
+android_repositories/guardian/
+android_repositories/kali/
+android_repositories/metatrans/
+android_repositories/pendingintent_analysis/candidates/
+
+# Keep the 13 selected APKs used for dynamic validation
+!android_repositories/pendingintent_analysis/selected_13/
+!android_repositories/pendingintent_analysis/selected_13/**
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build artifacts for the fixture Android apps (regeneratable via the
+# build scripts documented in frida_validation/test_apps/README.md)
+frida_validation/test_apps/build/
+
+# Keep signed, ready-to-install APKs in dist/ (small, purpose-built)
+# but exclude idsig files (regeneratable, not meaningful without the apk)
+frida_validation/test_apps/dist/*.idsig
+
+# Misc scratch files generated during interactive debugging
+frida_validation/*.log
+frida_validation/ui*.xml
+frida_validation/pf*.xml
+
+# Editor/OS
+.vscode/
+Thumbs.db
+.DS_Store

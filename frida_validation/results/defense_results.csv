@@ -1,0 +1,4 @@
+category,rank,package,pi_captured,A,B,C,false_positive_ok
+v3,1,com.adguard.android.contentblocker,1,NULL_PENDING_INTENT,NULL_PENDING_INTENT,NULL_PENDING_INTENT,
+v3,2,org.secuso.privacyfriendly2048,0,NO_DATA,NO_DATA,NO_DATA,
+v3,3,com.newoether.agora,1,NULL_PENDING_INTENT,NULL_PENDING_INTENT,NULL_PENDING_INTENT,

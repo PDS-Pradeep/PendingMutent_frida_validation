@@ -1,0 +1,14 @@
+Spawned `com.acutis.firewall`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 6489
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=6489
+{"timestamp":"2026-08-24T16:32:29.957Z","pid":6489,"event":"FORCER_INFO","data":{"detail":"forcing 1 call site(s) for com.acutis.firewall"}}
+{"timestamp":"2026-08-24T16:32:29.964Z","pid":6489,"event":"FORCE_ATTEMPT","data":{"package":"com.acutis.firewall","className":"com.acutis.firewall.service.FirewallVpnService","methodName":"createNotification","status":"STATIC_CALL_FAILED","detail":"Error: expected a pointer"}}

@@ -1,0 +1,13 @@
+Spawned `org.secuso.aktivpause`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 5086
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=5086
+{"timestamp":"2026-08-24T16:29:48.236Z","pid":5086,"event":"FORCER_INFO","data":{"detail":"no FORCE_TARGETS configured for package=org.secuso.aktivpause"}}

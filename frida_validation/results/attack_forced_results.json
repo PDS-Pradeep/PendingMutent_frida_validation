@@ -1,0 +1,119 @@
+[
+  {
+    "category": "v1",
+    "rank": "1",
+    "package": "com.github.meypod.al_azan",
+    "pi_captured": 279,
+    "A": "EXECUTED",
+    "B": "EXECUTED",
+    "C": "EXECUTED"
+  },
+  {
+    "category": "v1",
+    "rank": "2",
+    "package": "me.tagavari.airmessage",
+    "pi_captured": 3,
+    "A": "EXECUTED",
+    "B": "EXECUTED",
+    "C": "EXECUTED"
+  },
+  {
+    "category": "v1",
+    "rank": "3",
+    "package": "com.pedronveloso.a11ybutton",
+    "pi_captured": 1,
+    "A": "NULL_PENDING_INTENT",
+    "B": "NULL_PENDING_INTENT",
+    "C": "NULL_PENDING_INTENT"
+  },
+  {
+    "category": "v1",
+    "rank": "4",
+    "package": "org.secuso.aktivpause",
+    "pi_captured": 0,
+    "A": "NO_DATA",
+    "B": "NO_DATA",
+    "C": "NO_DATA"
+  },
+  {
+    "category": "v1",
+    "rank": "5",
+    "package": "host.stjin.anonaddy",
+    "pi_captured": 1,
+    "A": "NULL_PENDING_INTENT",
+    "B": "NULL_PENDING_INTENT",
+    "C": "NULL_PENDING_INTENT"
+  },
+  {
+    "category": "v2",
+    "rank": "1",
+    "package": "com.tughi.aggregator",
+    "pi_captured": 0,
+    "A": "NO_DATA",
+    "B": "NO_DATA",
+    "C": "NO_DATA"
+  },
+  {
+    "category": "v2",
+    "rank": "2",
+    "package": "dev.ukanth.ufirewall",
+    "pi_captured": 1,
+    "A": "EXECUTED",
+    "B": "EXECUTED",
+    "C": "EXECUTED"
+  },
+  {
+    "category": "v2",
+    "rank": "3",
+    "package": "com.shapeshed.aerial",
+    "pi_captured": 2,
+    "A": "EXECUTED",
+    "B": "EXECUTED",
+    "C": "EXECUTED"
+  },
+  {
+    "category": "v2",
+    "rank": "4",
+    "package": "com.acutis.firewall",
+    "pi_captured": 0,
+    "A": "NO_DATA",
+    "B": "NO_DATA",
+    "C": "NO_DATA"
+  },
+  {
+    "category": "v2",
+    "rank": "5",
+    "package": "info.metadude.android.congress.schedule",
+    "pi_captured": 1,
+    "A": "EXECUTED",
+    "B": "EXECUTED",
+    "C": "EXECUTED"
+  },
+  {
+    "category": "v3",
+    "rank": "1",
+    "package": "com.adguard.android.contentblocker",
+    "pi_captured": 61,
+    "A": "EXECUTED",
+    "B": "EXECUTED",
+    "C": "EXECUTED"
+  },
+  {
+    "category": "v3",
+    "rank": "2",
+    "package": "org.secuso.privacyfriendly2048",
+    "pi_captured": 0,
+    "A": "NO_DATA",
+    "B": "NO_DATA",
+    "C": "NO_DATA"
+  },
+  {
+    "category": "v3",
+    "rank": "3",
+    "package": "com.newoether.agora",
+    "pi_captured": 1,
+    "A": "NULL_PENDING_INTENT",
+    "B": "NULL_PENDING_INTENT",
+    "C": "NULL_PENDING_INTENT"
+  }
+]

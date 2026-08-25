@@ -1,0 +1,16 @@
+Spawned `info.metadude.android.congress.schedule`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 6580
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=6580
+{"timestamp":"2026-08-24T16:33:00.776Z","pid":6580,"event":"FORCER_INFO","data":{"detail":"no FORCE_TARGETS configured for package=info.metadude.android.congress.schedule"}}
+{"timestamp":"2026-08-24T16:33:09.690Z","pid":6580,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=info.metadude.android.congress.schedule | creatorUid=10180 | targetPackage=info.metadude.android.congress.schedule"}}
+{"timestamp":"2026-08-24T16:33:09.738Z","pid":6580,"event":"ATTACK_RESULTS","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=info.metadude.android.congress.schedule | creatorUid=10180 | targetPackage=info.metadude.android.congress.schedule","results":[{"attack":"A_fillin_injection","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"C_cancel_hijack","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"cancel() completed without SecurityException from attacker context"}]}}
+Process crashed: Trace/BPT trap

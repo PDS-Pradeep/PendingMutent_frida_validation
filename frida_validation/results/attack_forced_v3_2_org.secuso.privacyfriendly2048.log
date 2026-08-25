@@ -1,0 +1,34 @@
+Spawned `org.secuso.privacyfriendly2048`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 7015
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=7015
+Process crashed: Trace/BPT trap
+
+***
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'google/sdk_gphone_x86_64/generic_x86_64_arm64:11/RSR1.240422.006/12134477:userdebug/dev-keys'
+Revision: '0'
+ABI: 'x86_64'
+Timestamp: 2026-08-24 22:03:44+0530
+pid: 7015, tid: 7046, name: RenderThread  >>> org.secuso.privacyfriendly2048 <<<
+uid: 10181
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+Abort message: 'GL errors! frameworks/base/libs/hwui/pipeline/skia/SkiaOpenGLPipeline.cpp:127'
+    rax 0000000000000000  rbx 0000000000001b67  rcx 0000779531a5e298  rdx 0000000000000006
+    r8  0000000000000000  r9  0000000000000000  r10 0000779244e1d320  r11 0000000000000246
+    r12 000000000000000b  r13 0000000000000001  r14 0000779244e1d318  r15 0000000000001b86
+    rdi 0000000000001b67  rsi 0000000000001b86
+    rbp 00007792c0fa7db0  rsp 0000779244e1d308  rip 0000779531a5e298
+backtrace:
+      #00 pc 000000000005a298  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+24) (BuildId: edf0af8d613e7bdf6a416ec8f4edeb0d)
+      #01 pc 000000000005d202  /apex/com.android.runtime/lib64/bionic/libc.so!libc.so (offset 0x5c000) (abort+194) (BuildId: edf0af8d613e7bdf6a416ec8f4edeb0d)
+      #02 pc 0000000000000523  <anonymous:77953159c000>
+***

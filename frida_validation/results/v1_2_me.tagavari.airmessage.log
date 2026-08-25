@@ -1,0 +1,17 @@
+Spawned `me.tagavari.airmessage`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 11000
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+{"timestamp":"2026-08-22T18:19:42.495Z","pid":11000,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null"}}
+{"timestamp":"2026-08-22T18:19:42.495Z","pid":11000,"event":"ATTACK_RESULTS","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null","results":[{"attack":"A_fillin_injection","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"},{"attack":"B_privilege_escalation","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"},{"attack":"C_cancel_hijack","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"}]}}
+{"timestamp":"2026-08-22T18:19:43.270Z","pid":11000,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=me.tagavari.airmessage | creatorUid=10221 | targetPackage=me.tagavari.airmessage"}}
+{"timestamp":"2026-08-22T18:19:43.325Z","pid":11000,"event":"ATTACK_RESULTS","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=me.tagavari.airmessage | creatorUid=10221 | targetPackage=me.tagavari.airmessage","results":[{"attack":"A_fillin_injection","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"C_cancel_hijack","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"cancel() completed without SecurityException from attacker context"}]}}
+{"timestamp":"2026-08-22T18:19:43.343Z","pid":11000,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=me.tagavari.airmessage | creatorUid=10221 | targetPackage=me.tagavari.airmessage"}}
+{"timestamp":"2026-08-22T18:19:43.413Z","pid":11000,"event":"ATTACK_RESULTS","data":{"api":"getBroadcast","pendingIntent":"creatorPackage=me.tagavari.airmessage | creatorUid=10221 | targetPackage=me.tagavari.airmessage","results":[{"attack":"A_fillin_injection","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"C_cancel_hijack","api":"getBroadcast","status":"EXECUTED_NO_EXCEPTION","detail":"cancel() completed without SecurityException from attacker context"}]}}

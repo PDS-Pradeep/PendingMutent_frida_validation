@@ -1,0 +1,1165 @@
+apk,filename,error,traceback
+D:\APK_Downloader\android_repositories\fdroid_main\accelerace.apk,accelerace.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\akylas.alpi.maps_284.apk,akylas.alpi.maps_284.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\app.ninesevennine.twofactorauthenticator_10013004.apk,app.ninesevennine.twofactorauthenticator_10013004.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\ara.note_1.apk,ara.note_1.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\bluepie.ad_silence_55.apk,bluepie.ad_silence_55.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\br.com.wasystems.audiooutputswitcher_11.apk,br.com.wasystems.audiooutputswitcher_11.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\ch.pete.adbclipboard_6.apk,ch.pete.adbclipboard_6.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.aicodix.assempix_19.apk,com.aicodix.assempix_19.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.alexmercerind.audire_3.apk,com.alexmercerind.audire_3.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.amaze.filemanager_125.apk,com.amaze.filemanager_125.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.amaze.fileutilities_140.apk,com.amaze.fileutilities_140.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.andreacioccarelli.androoster_62.apk,com.andreacioccarelli.androoster_62.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.antoniegil.astronia_10710.apk,com.antoniegil.astronia_10710.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.apk.editor_35.apk,com.apk.editor_35.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.apkupdater.ci_604.apk,com.apkupdater.ci_604.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.audiobookshelf.app_117.apk,com.audiobookshelf.app_117.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.aurora.store_76.apk,com.aurora.store_76.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.beemdevelopment.aegis_81.apk,com.beemdevelopment.aegis_81.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.codedead.advancedportchecker_17.apk,com.codedead.advancedportchecker_17.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.coleblvck.antiiq_2019.apk,com.coleblvck.antiiq_2019.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.dokeraj.androtainer_20.apk,com.dokeraj.androtainer_20.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.dustinhendriks.andme_5.apk,com.dustinhendriks.andme_5.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.eyalm.adns_14.apk,com.eyalm.adns_14.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.github.ghmxr.apkextractor_16.apk,com.github.ghmxr.apkextractor_16.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.github.helltar.anpaside_30.apk,com.github.helltar.anpaside_30.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.github.warren_bank.adb_over_wifi_1000101.apk,com.github.warren_bank.adb_over_wifi_1000101.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.gitlab.fasheng.nlp.amap_32.apk,com.gitlab.fasheng.nlp.amap_32.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.google.android.projection.gearhead.xunlocked_201.apk,com.google.android.projection.gearhead.xunlocked_201.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.htetznaing.adbotg_2.apk,com.htetznaing.adbotg_2.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.iiordanov.freeaRDP_116450.apk,com.iiordanov.freeaRDP_116450.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.jecelyin.editor.v2_32.apk,com.jecelyin.editor.v2_32.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.jlindemann.science_90.apk,com.jlindemann.science_90.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.jvdegithub.aiscatcher_115.apk,com.jvdegithub.aiscatcher_115.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.kaanelloed.iconeration_44.apk,com.kaanelloed.iconeration_44.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.kamwithk.ankiconnectandroid_15.apk,com.kamwithk.ankiconnectandroid_15.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.kssidll.arru_53.apk,com.kssidll.arru_53.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.leohearts.alternativeUnlockHook_8.apk,com.leohearts.alternativeUnlockHook_8.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.lulu786.Alternate_15.apk,com.lulu786.Alternate_15.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.mine.autolight_17.apk,com.mine.autolight_17.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.mine.autooffbluetooth_8.apk,com.mine.autooffbluetooth_8.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.mine.autosleep_8.apk,com.mine.autosleep_8.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.nagopy.android.aplin_45.apk,com.nagopy.android.aplin_45.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.nevidimka655.astracrypt_20400.apk,com.nevidimka655.astracrypt_20400.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.openappslabs.fiveg_5.apk,com.openappslabs.fiveg_5.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.opengps.altlocationservices_2.apk,com.opengps.altlocationservices_2.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.programminghoch10.AntiBrightnessChange_60.apk,com.programminghoch10.AntiBrightnessChange_60.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.roundsalmon4.appverifier_28.apk,com.roundsalmon4.appverifier_28.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.thinkdifferent.anywebview_6.apk,com.thinkdifferent.anywebview_6.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.thirtytwo.steps_35.apk,com.thirtytwo.steps_35.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.tomclaw.appsend_1160.apk,com.tomclaw.appsend_1160.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.tre.a11cellnetworkchanger_4.apk,com.tre.a11cellnetworkchanger_4.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.victorb.androidnetworkscanner_1003001.apk,com.victorb.androidnetworkscanner_1003001.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.virtual_pen_1.apk,com.virtual_pen_1.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\com.vitorpamplona.amethyst_456.apk,com.vitorpamplona.amethyst_456.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\de.androvdr_29.apk,de.androvdr_29.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\deltazero.amarok.foss_124.apk,deltazero.amarok.foss_124.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\dev.pranav.applock_250.apk,dev.pranav.applock_250.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\dev.rx.app2proxy_3.apk,dev.rx.app2proxy_3.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\eu.darken.apl_803000.apk,eu.darken.apl_803000.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\eu.fulldisclosure.android.luks_2.apk,eu.fulldisclosure.android.luks_2.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\exa.lnx.a_675.apk,exa.lnx.a_675.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\exe.bbllw8.anemo_18.apk,exe.bbllw8.anemo_18.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\fr.dzx.audiosource_7.apk,fr.dzx.audiosource_7.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\green_green_avk.anotherterm.redist_146.apk,green_green_avk.anotherterm.redist_146.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\green_green_avk.anothertermshellplugin_android10essentials_10.apk,green_green_avk.anothertermshellplugin_android10essentials_10.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\in.hridayan.ashell_62.apk,in.hridayan.ashell_62.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\in.sunilpaulmathew.appvaultx_5.apk,in.sunilpaulmathew.appvaultx_5.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\in.sunilpaulmathew.ashell_28.apk,in.sunilpaulmathew.ashell_28.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\inc.flide.vi8_170500.apk,inc.flide.vi8_170500.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.alcatraz.audiohq_31.apk,io.alcatraz.audiohq_31.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.atticusc.atmosweather_3010000.apk,io.atticusc.atmosweather_3010000.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.github.abdurazaaqmohammed.ApkExtractor_4.apk,io.github.abdurazaaqmohammed.ApkExtractor_4.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.github.dmitrytsyvtsyn.algosortinganimations_1.apk,io.github.dmitrytsyvtsyn.algosortinganimations_1.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.github.giuig.auraninja_12615.apk,io.github.giuig.auraninja_12615.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.github.juby210.appinfofix_4.apk,io.github.juby210.appinfofix_4.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.github.mkckr0.audio_share_app_3004.apk,io.github.mkckr0.audio_share_app_3004.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.github.mthli.mount_8.apk,io.github.mthli.mount_8.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\io.github.muntashirakon.AppManager_450.apk,io.github.muntashirakon.AppManager_450.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\me.bmax.apatch_11219.apk,me.bmax.apatch_11219.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\moe.ampersand.app_1613.apk,moe.ampersand.app_1613.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\moe.haruue.wadb_212.apk,moe.haruue.wadb_212.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\moe.koiverse.archivetune_135.apk,moe.koiverse.archivetune_135.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\net.kevinboone.androidmediaserver_3.apk,net.kevinboone.androidmediaserver_3.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\org.adaptit.adaptitmobile_67.apk,org.adaptit.adaptitmobile_67.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\org.netdex.androidusbscript_122.apk,org.netdex.androidusbscript_122.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\org.nuclearfog.apollo_76.apk,org.nuclearfog.apollo_76.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\org.secuso.aktivpause_102.apk,org.secuso.aktivpause_102.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\remix.myplayer_21000.apk,remix.myplayer_21000.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\ru.bluecat.android.xposed.mods.appsettings_29.apk,ru.bluecat.android.xposed.mods.appsettings_29.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\ru.mark99.appsearcher_24011303.apk,ru.mark99.appsearcher_24011303.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\ru.wohlsoft.adlmidiplayer_1060100.apk,ru.wohlsoft.adlmidiplayer_1060100.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\soko.ekibun.xposed.applocale_16.apk,soko.ekibun.xposed.applocale_16.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\systems.nik.anthology_10008.apk,systems.nik.anthology_10008.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\tech.laihz.alga_37.apk,tech.laihz.alga_37.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\timeline.lizimumu.com.t_27.apk,timeline.lizimumu.com.t_27.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\vadimerenkov.aucards_21.apk,vadimerenkov.aucards_21.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"
+D:\APK_Downloader\android_repositories\izzyondroid\xyz.sommd.automute_106002000.apk,xyz.sommd.automute_106002000.apk,End of central directory record (EOCD) signature not found,"Traceback (most recent call last):
+  File ""D:\APK_Downloader\analyze_pendingintent_corpus.py"", line 644, in analyze_apk
+    apk = APK(str(apk_path))
+  File ""D:\Python\Python314\Lib\site-packages\androguard\core\apk\__init__.py"", line 377, in __init__
+    self.zip = ZipEntry.parse(filename, False)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 409, in parse
+    eocd = EndOfCentralDirectoryRecord.parse(apk_file)
+  File ""D:\Python\Python314\Lib\site-packages\apkInspector\headers.py"", line 60, in parse
+    raise ValueError(""End of central directory record (EOCD) signature not found"")
+ValueError: End of central directory record (EOCD) signature not found
+"

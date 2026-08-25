@@ -1,0 +1,17 @@
+Spawned `host.stjin.anonaddy`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 5493
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=5493
+{"timestamp":"2026-08-24T16:30:36.479Z","pid":5493,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null"}}
+{"timestamp":"2026-08-24T16:30:36.479Z","pid":5493,"event":"ATTACK_RESULTS","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null","results":[{"attack":"A_fillin_injection","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"},{"attack":"B_privilege_escalation","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"},{"attack":"C_cancel_hijack","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"}]}}
+{"timestamp":"2026-08-24T16:30:38.404Z","pid":5493,"event":"FORCER_INFO","data":{"detail":"forcing 2 call site(s) for host.stjin.anonaddy"}}
+{"timestamp":"2026-08-24T16:30:38.408Z","pid":5493,"event":"FORCE_ATTEMPT","data":{"package":"host.stjin.anonaddy","className":"host.stjin.anonaddy.notifications.NotificationHelper","methodName":"buildSetupAppFirstNotification","status":"STATIC_CALL_FAILED","detail":"Error: expected a pointer"}}
+{"timestamp":"2026-08-24T16:30:38.422Z","pid":5493,"event":"FORCE_ATTEMPT","data":{"package":"host.stjin.anonaddy","className":"host.stjin.anonaddy.notifications.NotificationHelper","methodName":"buildFailedBackupNotification","status":"STATIC_CALL_FAILED","detail":"Error: expected a pointer"}}

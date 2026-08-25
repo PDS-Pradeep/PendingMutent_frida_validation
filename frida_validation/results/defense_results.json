@@ -1,0 +1,32 @@
+[
+  {
+    "category": "v3",
+    "rank": "1",
+    "package": "com.adguard.android.contentblocker",
+    "pi_captured": 1,
+    "A": "NULL_PENDING_INTENT",
+    "B": "NULL_PENDING_INTENT",
+    "C": "NULL_PENDING_INTENT",
+    "false_positive_ok": null
+  },
+  {
+    "category": "v3",
+    "rank": "2",
+    "package": "org.secuso.privacyfriendly2048",
+    "pi_captured": 0,
+    "A": "NO_DATA",
+    "B": "NO_DATA",
+    "C": "NO_DATA",
+    "false_positive_ok": null
+  },
+  {
+    "category": "v3",
+    "rank": "3",
+    "package": "com.newoether.agora",
+    "pi_captured": 1,
+    "A": "NULL_PENDING_INTENT",
+    "B": "NULL_PENDING_INTENT",
+    "C": "NULL_PENDING_INTENT",
+    "false_positive_ok": null
+  }
+]

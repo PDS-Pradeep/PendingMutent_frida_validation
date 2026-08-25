@@ -1,0 +1,416 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!8},
+    columns=fullflexible,
+    xleftmargin=0.5em,
+    xrightmargin=0.5em
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\title{PendingIntent Vulnerability Class (v1/v2/v3):\\
+Static Triage, Cross-App Exploitation, and Verified Mitigation}
+\author{Research / Test Evaluation Report}
+\date{August 24, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report documents a full evaluation cycle for a well-known Android vulnerability
+class involving \texttt{PendingIntent} objects: unrestricted mutability (fill-in Intent
+injection), privilege escalation via delegated \texttt{send()} capability, and ownership
+hijacking via \texttt{cancel()}. The evaluation proceeds through four stages of
+increasing rigor: (1) static triage over a 245-APK F-Droid/IzzyOnDroid corpus, (2) a
+same-process Frida-based simulation of attack and defense logic, (3) a genuine
+two-application, two-UID exploitation of the vulnerability built and executed on a real
+Android emulator, and (4) a genuine two-application mitigation, likewise built and
+executed, using OS-enforced controls rather than in-app logic. The final result is
+empirical, not projected: two of three attack variants were confirmed exploitable in an
+unprotected baseline and confirmed blocked in a hardened variant, on-device.
+\end{abstract}
+
+\tableofcontents
+
+\section{Background and Objective}
+
+\texttt{PendingIntent} is an Android API object that lets one application delegate a
+piece of its own authority (the ability to fire an \texttt{Intent} with that
+application's identity) to another component or process, most commonly the system
+server (for notifications, alarms, and app widgets). Because a \texttt{PendingIntent}
+is a Binder-backed token, whoever holds a reference to it can, subject to platform
+protections, invoke operations on it as if they were the creator. Three attack
+variants were investigated:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{v1 -- Fill-in Intent / mutable PendingIntent.} If a
+    \texttt{PendingIntent} is created without \texttt{FLAG\_IMMUTABLE}, a holder can
+    supply a ``fill-in'' \texttt{Intent} via \texttt{send(Context, int, Intent)} that
+    overrides the action, data, component, or categories of the underlying Intent,
+    redirecting what the creator's privileged operation actually does.
+    \item \textbf{v2 -- Privilege / permission boundary.} A \texttt{PendingIntent}
+    handed to an external component (an exported activity/service/receiver, or leaked
+    via an unprotected broadcast) may let an unrelated app trigger the creator's
+    privileged action via \texttt{send()}.
+    \item \textbf{v3 -- PendingIntent cancel / ownership.} A holder that is not the
+    creator may call \texttt{cancel()} on a captured \texttt{PendingIntent}, silently
+    revoking the creator's own capability.
+    \end{itemize}
+
+The objective of this evaluation was to determine, with evidence rather than assumption,
+whether these three variants are exploitable across a process/UID boundary, and whether
+a proposed set of mitigations genuinely prevents them at the operating-system level.
+
+\section{Evaluation Strategy}
+
+The evaluation was carried out in four escalating stages, each addressing a limitation
+identified in the previous one.
+
+\subsection*{Stage 1 -- Static corpus triage}
+A Python analyzer (\texttt{analyze\_pendingintent\_corpus.py}, built on
+\texttt{androguard 4.x}) scanned 245 real-world APKs drawn from the \texttt{fdroid\_main}
+and \texttt{izzyondroid} mirrors. For every method invoking a
+\texttt{PendingIntent.*} factory or operation, the analyzer inspected the raw decoded
+bytecode for:
+\begin{itemize}[leftmargin=1.5em]
+    \item Folded mutability-flag bit patterns (\texttt{FLAG\_MUTABLE},
+    \texttt{FLAG\_IMMUTABLE}, \texttt{FLAG\_ALLOW\_UNSAFE\_IMPLICIT\_INTENT}), detected
+    by bitwise testing of every integer literal operand rather than exact string
+    matching, since the compiler folds flag combinations into a single constant.
+    \item String/API indicators for fill-in usage, external Intent sourcing
+    (\texttt{getParcelableExtra}, etc.), ownership checks
+    (\texttt{getCreatorPackage}, \texttt{getCallingUid}, etc.), and permission checks.
+    \item Manifest-level exposure: exported components, permission-guarded components,
+    declared permissions.
+\end{itemize}
+Each APK received a v1, v2, and v3 heuristic score with an explicit disclaimer in the
+tool's own documentation: \emph{``This is STATIC TRIAGE. A v1/v2/v3 score does NOT prove
+exploitability.''} Thirteen APKs (5 v1, 5 v2, 3 v3) were selected for downstream dynamic
+validation.
+
+\subsection*{Stage 2 -- Same-process Frida simulation}
+A Frida harness (\texttt{run\_validation.py} plus \texttt{pendingintent\_attack\_sim.js}
+/ \texttt{pendingintent\_defense\_sim.js}) attached to each of the 13 selected APKs,
+hooked the \texttt{PendingIntent} factory methods, and on every capture attempted three
+attacker-style operations (fill-in injection, \texttt{send()}, \texttt{cancel()}) either
+unconditionally (attack mode) or behind a reference ownership-authorization gate
+(defense mode). This stage's own documentation flags its central limitation: because
+Frida attaches to and executes inside the target app's own process, there is no genuine
+second UID involved -- the ``attacker'' identity is a hardcoded, synthetic string
+compared against the real \texttt{creatorPackage} the OS reports. Running this against
+the 13 real candidates also revealed a practical limitation: most of them never created
+an observable \texttt{PendingIntent} during the passive observation window (see Table
+\ref{tab:v3-defense}), so no exploit or defense outcome was actually recorded for those
+apps.
+
+\subsection*{Stage 3 -- Genuine cross-app, cross-UID exploitation}
+To remove the same-process limitation of Stage 2, two purpose-built Android applications
+were designed, implemented, compiled, signed, and installed as if they were real,
+independent apps: \texttt{VictimApp}, which creates and leaks a
+\texttt{PendingIntent}, and \texttt{MalwareApp}, a genuinely separate application (own
+package, own UID, own process) that captures the leaked \texttt{PendingIntent} and
+performs the three attacker operations against the live Android API. This is a real
+two-app reproduction of the attack, not a simulation of one.
+
+\subsection*{Stage 4 -- Genuine cross-app mitigation and verification}
+A hardened variant of each app (\texttt{VictimAppHardened}, \texttt{MalwareAppV2}) was
+built to test whether OS-enforced controls -- rather than any application-level logic --
+actually prevent the attacks. \texttt{MalwareAppV2} was deliberately signed with a
+different certificate than \texttt{VictimAppHardened}, which is the precondition for a
+signature-level permission check to have anything to enforce. Both the baseline and the
+hardened scenario were then executed end-to-end on a real Android emulator, and the
+logcat output was captured as direct evidence.
+
+\section{Why an In-Receiver Ownership Check Cannot Work}
+
+Before designing Stage 4's mitigation, an initially tempting approach was considered and
+rejected: adding an ownership check inside the receiver that handles the
+\texttt{PendingIntent}'s underlying action (e.g., checking
+\texttt{Binder.getCallingUid()} inside \texttt{onReceive()}). This does not work,
+because when Android delivers a broadcast triggered via \texttt{PendingIntent.send()},
+the receiving component is invoked with no reliable signal identifying which process
+called \texttt{.send()}. The entire purpose of \texttt{PendingIntent} is delegation: the
+action executes with the \emph{creator's} authority regardless of who invoked it, and
+\texttt{Binder.getCallingUid()} inside the receiver typically reflects the broadcast
+dispatcher (e.g. \texttt{system\_server}), not the actual invoking app. Any check
+written at that point would be guessing, not enforcement. Real prevention must instead
+be applied \emph{upstream}, at the point where the \texttt{PendingIntent} is created and
+shared, using controls the OS itself enforces.
+
+\section{Application Details}
+
+Four Android applications were designed and implemented as minimal, buildable, real
+APKs (no Gradle; built directly with SDK command-line tools). All target
+\texttt{minSdkVersion=23}, \texttt{targetSdkVersion=30}, matching the only system image
+available in the local environment (Pixel 6 AVD, \texttt{android-30/google\_apis/x86\_64}).
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{2.6cm}p{3.1cm}p{3.6cm}p{4.3cm}@{}}
+\toprule
+\textbf{App} & \textbf{Package} & \textbf{Role} & \textbf{Signing Certificate} \\
+\midrule
+VictimApp & \texttt{com.research.pivictim} & Creates a \emph{mutable} PendingIntent
+(\texttt{FLAG\_MUTABLE}), leaks it via an unprotected exported broadcast
+(\texttt{PI\_LEAK\_ACTION}). & \texttt{debug.keystore}, CN=Android Debug,
+SHA-256 \texttt{ec26c9ed\ldots} \\
+MalwareApp & \texttt{com.research.pimalware} & Captures the leaked PendingIntent
+(receiver registered both statically and dynamically) and fires attacks A/B/C against
+the real Android API. & Same as VictimApp (same cert; UID differs) \\
+VictimAppHardened & \texttt{com.research.pivictimhardened} & Creates an
+\emph{immutable} PendingIntent (\texttt{FLAG\_IMMUTABLE}); leak broadcast requires a
+newly declared \texttt{protectionLevel="signature"} permission. & Same
+\texttt{debug.keystore} as VictimApp \\
+MalwareAppV2 & \texttt{com.research.pimalwarev2} & Declares
+\texttt{uses-permission} for the hardened victim's signature permission; identical
+attack logic, retargeted. & \texttt{malware\_v2.keystore}, CN=Malware V2 Attacker,
+SHA-256 \texttt{8504e94f\ldots} (deliberately different) \\
+\bottomrule
+\end{tabular}
+\caption{The four test applications built for Stages 3 and 4.}
+\end{table}
+
+\subsection*{VictimApp / VictimAppHardened -- Sensitive Operation}
+Both variants target the same conceptual ``privileged operation'':
+\texttt{SensitiveActionReceiver}, a broadcast receiver representing whatever sensitive
+action a real app might gate behind a \texttt{PendingIntent} (dismissing a
+notification, completing a payment, replaying an authenticated action). It has no
+ownership check of its own -- by design, since Section 3 establishes that such a check
+cannot work at that point -- and every invocation is logged to Logcat and to an
+internal marker file, whether triggered by the app's own logic or by an external
+\texttt{PendingIntent.send()}/\texttt{cancel()} call.
+
+\subsection*{MalwareApp / MalwareAppV2 -- Attack Runner}
+Both variants implement identical attack logic in an \texttt{AttackRunner} class:
+
+\begin{lstlisting}[language=Java, caption={Attack B, privilege escalation via bare send()}]
+private static void attackB_privilegeEscalation(PendingIntent captured) {
+    try {
+        captured.send();
+        Log.i(TAG, "{\"attack\":\"B_privilege_escalation\",\"status\":\"EXECUTED\"}");
+    } catch (SecurityException e) {
+        Log.i(TAG, "{...\"status\":\"SECURITY_EXCEPTION\"...}");
+    }
+}
+\end{lstlisting}
+
+A build-time correction was required during implementation: Android 8+ (API 26+)
+background execution limits silently drop most broadcasts to a manifest-declared
+receiver once the receiving app is not in the foreground -- which occurs here because
+launching the victim's activity backgrounds the malware app moments later. Both
+malware apps were updated to \emph{additionally} register their capture receiver
+dynamically via \texttt{Context.registerReceiver()}, a technique real malware commonly
+uses for the same reason. This change does not weaken the Stage 4 test: permission
+checks are enforced by \texttt{BroadcastQueue} at delivery time regardless of how the
+receiver was registered, and this was directly confirmed in the captured logs (Section
+6.2).
+
+\section{Build and Verification Methodology}
+
+All four APKs were built entirely with Android SDK command-line tools (no Gradle):
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Compile:} \texttt{javac}, JDK 26.0.2, against
+    \texttt{android-30/android.jar}.
+    \item \textbf{Dex:} \texttt{d8} (build-tools 36.0.0).
+    \item \textbf{Resource compile/link:} \texttt{aapt2 compile} then \texttt{aapt2 link}.
+    \item \textbf{Dex injection:} \texttt{jar --update} to insert \texttt{classes.dex}
+    into the linked base APK.
+    \item \textbf{Alignment:} \texttt{zipalign -p 4}.
+    \item \textbf{Signing:} \texttt{apksigner sign}, using two distinct keystores as
+    described in Table 1.
+\end{enumerate}
+
+Prior to any runtime test, static correctness was verified directly:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \texttt{apksigner verify --print-certs} confirmed the two signing
+    certificates differ (Table 1), the precondition for a signature-level permission
+    check to be meaningful at all.
+    \item \texttt{aapt dump xmltree AndroidManifest.xml} on the compiled
+    \texttt{pivictimhardened.apk} confirmed the declared permission's
+    \texttt{protectionLevel} compiles to the binary value \texttt{0x2} (signature),
+    not merely appearing correct in source XML.
+\end{itemize}
+
+Runtime verification used a Pixel 6 AVD (API 30, x86\_64, Google APIs, 1536MB RAM),
+booted via \texttt{emulator.exe} with WHPX hardware acceleration, confirmed reachable
+via \texttt{adb devices} and \texttt{adb shell getprop sys.boot\_completed}.
+
+\section{Results}
+
+\subsection{Static Triage (Stage 1)}
+
+Of the 13 selected candidates, the three intended as ``pure v3'' (cancel/ownership
+risk) were in fact all classified \texttt{mixed} by the scoring logic -- meaning each
+also scored $\geq 10$ on at least one other axis. No app in the 245-APK corpus was
+found to exhibit \emph{isolated} v3 risk; real-world PendingIntent cancel/ownership
+exposure co-occurred with fill-in/mutability or permission-boundary exposure in every
+case observed.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+\textbf{Package} & \textbf{v1} & \textbf{v2} & \textbf{v3} & \textbf{Classification} \\
+\midrule
+com.adguard.android.contentblocker & 19 & 18 & 23 & mixed \\
+org.secuso.privacyfriendly2048 & 15 & 18 & 23 & mixed \\
+com.newoether.agora & 15 & 18 & 23 & mixed \\
+\bottomrule
+\end{tabular}
+\caption{Static v1/v2/v3 scores for the 3 selected v3 candidates.}
+\end{table}
+
+\subsection{Same-Process Frida Simulation (Stage 2)}
+
+\label{tab:v3-defense}
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}lrlll@{}}
+\toprule
+\textbf{Package} & \textbf{PI captured} & \textbf{Attack A} & \textbf{Attack B} & \textbf{Attack C} \\
+\midrule
+com.adguard.android.contentblocker & 1 & NULL\_PENDING\_INTENT & NULL\_PENDING\_INTENT & NULL\_PENDING\_INTENT \\
+org.secuso.privacyfriendly2048 & 0 & NO\_DATA & NO\_DATA & NO\_DATA \\
+com.newoether.agora & 1 & NULL\_PENDING\_INTENT & NULL\_PENDING\_INTENT & NULL\_PENDING\_INTENT \\
+\bottomrule
+\end{tabular}
+\caption{Defense-mode Frida results for the 3 real v3 candidates: no real,
+non-null PendingIntent was ever captured during the observation window.}
+\end{table}
+
+No exploit or defense outcome was empirically recorded for the real F-Droid candidates
+at this stage; the passive observation window never coincided with a real
+\texttt{PendingIntent} creation event for these apps.
+
+\subsection{Cross-App Baseline Exploitation (Stage 3) -- Real, Verified}
+
+Executed on the Pixel 6 / API 30 emulator. Full captured Logcat output (tags
+\texttt{PIVictim}, \texttt{PIMalware}):
+
+\begin{lstlisting}
+I/PIVictim: Created mutable PendingIntent: ... creatorPackage=com.research.pivictim creatorUid=10167
+I/PIVictim: Leaked PendingIntent via broadcast action=com.research.pivictim.PI_LEAK_ACTION
+I/PIMalware: PI_CAPTURED pendingIntent=... creatorPackage=com.research.pivictim
+             creatorUid=10167 thisPackage=com.research.pimalware thisUid=10168
+I/PIMalware: {"attack":"A_fillin_injection","status":"EXECUTED"}
+I/PIMalware: {"attack":"B_privilege_escalation","status":"EXECUTED"}
+I/PIMalware: {"attack":"C_cancel_hijack","status":"SECURITY_EXCEPTION",
+             "detail":"java.lang.SecurityException: Permission Denial:
+             cancelIntentSender() from pid=4873, uid=10168 is not allowed
+             to cancel package com.research.pivictim"}
+I/PIVictim: SensitiveActionReceiver fired: EXECUTED ... attackExtra=A_fillin_injection_from_pimalware
+I/PIVictim: SensitiveActionReceiver fired: EXECUTED ... attackExtra=null
+\end{lstlisting}
+
+\textbf{Unexpected finding.} Attack C (cancel-ownership hijack) was \emph{not}
+exploitable even in this fully unprotected baseline. Android's own
+\texttt{ActivityManagerService.cancelIntentSender()} independently checks the calling
+UID against the PendingIntent's owning package and throws \texttt{SecurityException} on
+mismatch, regardless of mutability flags or broadcast permissions. This corrected an
+initial assumption in the evaluation plan (that Attack C would succeed unprotected).
+Attacks A and B, by contrast, both executed successfully and were confirmed by
+\texttt{VictimApp}'s own receiver logging the attacker-controlled data.
+
+\subsection{Cross-App Hardened Mitigation (Stage 4) -- Real, Verified}
+
+Executed in the same emulator session. Full captured Logcat output (tags
+\texttt{PIVictimHardened}, \texttt{BroadcastQueue}; note the complete absence of any
+\texttt{PIMalwareV2} line):
+
+\begin{lstlisting}
+I/PIVictimHardened: Created IMMUTABLE PendingIntent: ...
+                     creatorPackage=com.research.pivictimhardened creatorUid=10169
+I/PIVictimHardened: Sent signature-permission-gated broadcast
+                     action=com.research.pivictimhardened.PI_LEAK_ACTION
+                     requiredPermission=com.research.pivictimhardened.permission.RECEIVE_PI_LEAK
+W/BroadcastQueue: Permission Denial: receiving Intent { act=...PI_LEAK_ACTION ... }
+                  to ProcessRecord{... com.research.pimalwarev2/u0a170} (pid=4956, uid=10170)
+                  requires com.research.pivictimhardened.permission.RECEIVE_PI_LEAK
+                  due to sender com.research.pivictimhardened (uid 10169)
+W/BroadcastQueue: Permission Denial: receiving Intent { act=...PI_LEAK_ACTION ... }
+                  to com.research.pimalwarev2/.PiCaptureReceiver
+                  requires com.research.pivictimhardened.permission.RECEIVE_PI_LEAK
+                  due to sender com.research.pivictimhardened (uid 10169)
+\end{lstlisting}
+
+The Android OS itself (\texttt{BroadcastQueue}) denied delivery to
+\texttt{com.research.pimalwarev2} (uid 10170, signed with a different certificate) at
+the permission check, before \texttt{onReceive()} was invoked for either the
+manifest-declared or the dynamically-registered receiver. No \texttt{PendingIntent} was
+ever captured by \texttt{MalwareAppV2}; consequently no attack of any kind had a target
+to operate on. \texttt{VictimAppHardened}'s own \texttt{SensitiveActionReceiver} log
+shows only the creation and leak-attempt lines, confirming it never received an
+attacker-triggered invocation.
+
+\subsection{Consolidated Result}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Attack} & \textbf{Baseline (unprotected)} & \textbf{Hardened} \\
+\midrule
+A -- fill-in injection & EXECUTED & Never reached (OS denied broadcast delivery) \\
+B -- send() escalation & EXECUTED & Never reached (OS denied broadcast delivery) \\
+C -- cancel() hijack & SECURITY\_EXCEPTION (platform's own UID check, unrelated to tested mitigations) & N/A -- no capture occurred \\
+\bottomrule
+\end{tabular}
+\caption{Final, empirically observed outcome for all three attack variants under both scenarios.}
+\end{table}
+
+\section{Conclusions}
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{The vulnerability is real, not merely a static-analysis score.} Attacks
+    A and B were demonstrated as genuine, working exploits between two independently
+    signed, independently processed Android applications -- not a same-process
+    simulation and not a heuristic score.
+    \item \textbf{In-app ownership checks placed at the point of use (the receiver)
+    cannot work}, because \texttt{PendingIntent} delegation removes any reliable signal
+    of the true invoking process at that point.
+    \item \textbf{Effective prevention must be applied upstream}, at PendingIntent
+    creation (\texttt{FLAG\_IMMUTABLE}) and at the point where the PendingIntent is
+    shared (a signature-level permission on the delivery channel). Both mechanisms are
+    enforced by the Android platform itself, not by application logic, and both were
+    empirically confirmed -- via direct OS-level denial in Logcat, not by inference --
+    to stop the two attacks that were otherwise exploitable.
+    \item \textbf{Attack C (cancel hijack) is independently mitigated by the platform}
+    at API level 30 via UID validation inside \texttt{cancelIntentSender()}, regardless
+    of the mitigations under test. This was an empirical correction to an initial
+    assumption, not a predicted result.
+    \item \textbf{Open scope for further work:} this evaluation confirms the
+    vulnerability and its mitigation on synthetic fixture apps at a single API level
+    (30). It does not establish that any of the 13 real F-Droid/IzzyOnDroid candidates
+    identified by static triage are themselves exploitable, since none of them yielded
+    an observable \texttt{PendingIntent} capture during passive dynamic observation
+    (Table \ref{tab:v3-defense}). It also does not establish whether platform behavior
+    (particularly the \texttt{cancelIntentSender()} UID check) is consistent across the
+    full range of API levels present in the corpus (up to API 37).
+\end{enumerate}
+
+\end{document}

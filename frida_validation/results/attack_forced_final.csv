@@ -1,0 +1,14 @@
+category,rank,package,pi_captured,A,B,C,method
+v1,1,com.github.meypod.al_azan,1343,EXECUTED,EXECUTED,EXECUTED,organic (original baseline)
+v1,2,me.tagavari.airmessage,3,EXECUTED,EXECUTED,EXECUTED,organic (original baseline)
+v1,3,com.pedronveloso.a11ybutton,0,NULL_PENDING_INTENT,NULL_PENDING_INTENT,NULL_PENDING_INTENT,unresolved - ServiceCheckWorker requires live WorkManager dispatch with real WorkerParameters; not forceable via reflection; app never scheduled the job in the observation window
+v1,4,org.secuso.aktivpause,1504,EXECUTED,EXECUTED,EXECUTED,organic (original baseline)
+v1,5,host.stjin.anonaddy,1,EXECUTED,EXECUTED,EXECUTED,forced - real construction of NotificationHelper with app Context via forcer script
+v2,1,com.tughi.aggregator,0,NO_DATA,NO_DATA,NO_DATA,unresolved - only call site is a Kotlin coroutine continuation (invokeSuspend); not forceable via static/instance reflection without a live coroutine scope
+v2,2,dev.ukanth.ufirewall,1,EXECUTED,EXECUTED,EXECUTED,forced - static call to Api.updateNotification via forcer script
+v2,3,com.shapeshed.aerial,47,EXECUTED,EXECUTED,EXECUTED,organic (original baseline)
+v2,4,com.acutis.firewall,2,EXECUTED,EXECUTED,EXECUTED,forced - bare-alloc + attachBaseContext on FirewallVpnService via forcer script
+v2,5,info.metadude.android.congress.schedule,3,EXECUTED,EXECUTED,EXECUTED,organic (original baseline)
+v3,1,com.adguard.android.contentblocker,1,EXECUTED,EXECUTED,EXECUTED,forced - instance call to NotificationServiceImpl.showRateAppNotification via forcer script
+v3,2,org.secuso.privacyfriendly2048,0,NO_DATA,NO_DATA,NO_DATA,unresolved - only call sites are androidx WorkManager library internals (Alarms/ForceStopRunnable); app code never directly creates a PendingIntent, requires real scheduled work to trigger
+v3,3,com.newoether.agora,1,EXECUTED,EXECUTED,EXECUTED,forced - real construction of AgoraForegroundService.Companion.createPendingIntent via forcer script

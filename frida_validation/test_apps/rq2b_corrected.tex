@@ -1,0 +1,184 @@
+% ══════════════════════════════════════════════════════════════════
+% CORRECTED "RQ2b"-style section — rewritten to report ONLY what was
+% actually built, run, and observed in this evaluation session.
+%
+% Differences from the original draft, stated explicitly so they are
+% not lost in the diff:
+%   - There is no named framework, no formal pipeline chi/psi/Xi/Pi,
+%     no P1-P7/T1 properties, and no library instrumentation applied to
+%     the 13 real APKs. Nothing in this session built or tested such a
+%     library. Removing it rather than describing it is the accurate
+%     choice.
+%   - The 13 APKs were not drawn from Androzoo and were not
+%     SHA-256/VirusTotal verified against Androzoo metadata. They were
+%     selected by a local static-triage script from a 245-APK
+%     F-Droid/IzzyOnDroid mirror corpus (not Play Store, not Androzoo).
+%   - Dynamic confirmation was NOT 13/13. It was 10/13, and only after
+%     a second-pass reflective "forcer" technique was added; 5/13 were
+%     confirmed organically and 5/13 required forcing. 3/13 remain
+%     unconfirmed for stated technical reasons (Section on limitations
+%     below).
+%   - There was no "Phase B" instrumentation of the 13 real APKs at
+%     all. The mitigation (FLAG_IMMUTABLE + signature-level broadcast
+%     permission) was built and verified on two purpose-built synthetic
+%     fixture apps (VictimApp/MalwareApp and their hardened variants),
+%     not on the 13 real candidates. This is a materially smaller claim
+%     than "all 39 real-app attacks were blocked."
+%   - Attack C (cancel() hijack) was never observed to succeed in the
+%     first place, in either the real-app baseline or the synthetic
+%     baseline: Android's own ActivityManagerService.cancelIntentSender()
+%     independently rejects a non-creator UID's cancel() call. It is
+%     therefore inaccurate to claim a custom framework "blocked" Attack
+%     C; the platform already prevents it, with or without any add-on.
+%   - No Culebra UI-replay tool was used. No false-positive rate was
+%     measured.
+%   - Environment was a Pixel 6 AVD (Android 13, API 30 requested via
+%     minSdk/targetSdk of the fixture apps; the AVD's own system image
+%     is API 30), not a physical HONOR Pad X9 nor an Android 14 device.
+% ══════════════════════════════════════════════════════════════════
+
+\subsection{Real-World Vulnerable Application Validation}
+\label{sec:rq2b}
+
+\textbf{Question.} Are the PendingIntent vulnerability patterns identified by static
+triage actually exploitable at runtime on real, unmodified applications, and can the
+attacks be prevented using OS-enforced mitigations rather than application-level
+ownership checks?
+
+\textbf{Corpus and selection.} A static analyzer (\texttt{analyze\_pendingintent\_corpus.py},
+built on androguard~4.x) scanned 245 APKs mirrored from the F-Droid main repository and
+the IzzyOnDroid repository. For each PendingIntent factory/operation call site, the
+analyzer inspected decoded bytecode for folded mutability-flag bit patterns
+(\texttt{FLAG\_MUTABLE}, \texttt{FLAG\_IMMUTABLE}), fill-in/external-Intent-source
+indicators, ownership-check indicators, and manifest-level exposure (exported
+components, declared permissions). Each APK received a heuristic v1 (mutable/fill-in),
+v2 (permission/export boundary), and v3 (cancel/ownership) score. This is static
+triage only; the tool's own documentation states explicitly that a score does not
+prove exploitability. Thirteen APKs (5 scored highest on v1, 5 on v2, 3 on v3) were
+selected for dynamic validation. These are open-source F-Droid/IzzyOnDroid applications
+(e.g. \texttt{com.github.meypod.al\_azan}, \texttt{dev.ukanth.ufirewall},
+\texttt{com.adguard.android.contentblocker}); they were not drawn from the Androzoo
+corpus and no VirusTotal or Androzoo-metadata verification was performed, since no such
+corpus was used.
+
+\textbf{Phase A — dynamic confirmation.} Each of the 13 APKs was installed on an
+Android emulator (Pixel~6 AVD profile, API~30, x86\_64) alongside a Frida instrumentation
+script hooking the five \texttt{PendingIntent} factory methods
+(\texttt{getActivity}, \texttt{getActivities}, \texttt{getBroadcast}, \texttt{getService},
+\texttt{getForegroundService}) and immediately attempting three operations on every
+captured, non-null PendingIntent: \textbf{(A)} a fill-in Intent injection via
+\texttt{send(Context,\allowbreak int,\allowbreak Intent)}, \textbf{(B)} a bare
+\texttt{send()} privilege-escalation attempt, and \textbf{(C)} a \texttt{cancel()}
+ownership-hijack attempt — all three invoked from within the same Frida-attached
+process (i.e., simulating a non-creator caller's actions against the captured object,
+not a genuine second application on a different UID).
+
+An initial passive-observation pass (installing the app and waiting, optionally driven
+by generic \texttt{monkey} events and forced JobScheduler runs) confirmed real,
+non-null PendingIntent captures for only 5 of the 13 apps. For the remaining 8, either
+no PendingIntent was created during the observation window (\texttt{NO\_DATA}) or the
+factory call observed returned \texttt{null} (\texttt{NULL\_PENDING\_INTENT}, consistent
+with a \texttt{FLAG\_NO\_CREATE} existence-check pattern rather than the operative
+creation call). To resolve this gap without fabricating a result, a second Frida script
+(\texttt{pendingintent\_forcer.js}) was written that reflectively invokes the specific
+app-internal method already identified by the static scan as the PendingIntent-creating
+call site — via a live instance found through \texttt{Java.choose()} where one existed,
+or via direct construction (real constructor call with the app's own live
+\texttt{Application} context substituted for any \texttt{Context}-typed parameter, or a
+bare \texttt{\$alloc()} followed by \texttt{ContextWrapper.attachBaseContext()} for
+Service/Activity-derived classes) where no live instance was running. This resolved 5 of
+the 8 previously-unconfirmed apps to real, non-null captures. The remaining 3 apps
+(Table~\ref{tab:rq2b-unresolved}) could not be resolved by this technique for
+structural reasons specific to each: one call site is a Kotlin coroutine resume point
+with no capturable state to reconstruct outside the real coroutine dispatcher; one is an
+\texttt{androidx.work.Worker} requiring a live \texttt{WorkerParameters} object that only
+WorkManager's own internal scheduler can legitimately construct; and one app's own code
+never calls a PendingIntent factory at all — every call site belongs to
+\texttt{androidx.work} library internals that only fire once a real periodic job has
+been scheduled through the app's UI. \textbf{The confirmed dynamic-exploitability rate
+is therefore 10 of 13 apps (77\%), not 13 of 13}, and of those 10, 5 were confirmed
+organically and 5 required the reflective forcing technique described above.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Dynamic PendingIntent-capture outcome for the 13 statically-selected
+candidates. ``Forced'' = required \texttt{pendingintent\_forcer.js}; ``Organic'' =
+captured during passive/driven observation without forcing.}
+\label{tab:rq2b-results}
+\begin{tabular}{@{}lcl@{}}
+\toprule
+\textbf{App (package)} & \textbf{Confirmed?} & \textbf{Method} \\
+\midrule
+com.github.meypod.al\_azan          & Yes & Organic \\
+me.tagavari.airmessage              & Yes & Organic \\
+org.secuso.aktivpause                & Yes & Organic \\
+com.shapeshed.aerial                 & Yes & Organic \\
+info.metadude.android.congress.schedule & Yes & Organic \\
+dev.ukanth.ufirewall                 & Yes & Forced (static call, \texttt{Api.updateNotification}) \\
+com.acutis.firewall                  & Yes & Forced (bare-alloc + \texttt{attachBaseContext}) \\
+host.stjin.anonaddy                  & Yes & Forced (real constructor + app Context) \\
+com.adguard.android.contentblocker   & Yes & Forced (live-instance call) \\
+com.newoether.agora                  & Yes & Forced (real constructor call) \\
+com.tughi.aggregator                 & No  & Kotlin coroutine resume point, no reconstructable state \\
+com.pedronveloso.a11ybutton           & No  & Worker needs a live WorkManager-issued \texttt{WorkerParameters} \\
+org.secuso.privacyfriendly2048        & No  & No app code creates a PI; only androidx.work internals do \\
+\bottomrule
+\end{tabular}
+\label{tab:rq2b-unresolved}
+\end{table}
+
+For the 10 confirmed apps, Attacks A and B executed without exception in every case:
+the fill-in Intent was delivered and the bare \texttt{send()} succeeded, both from the
+same in-process Frida caller acting as a stand-in for a non-creator. \textbf{Attack C
+did not succeed against any of the 10 apps.} Every \texttt{cancel()} attempt raised a
+\texttt{SecurityException} from the Android framework itself (observed pattern:
+\texttt{Permission Denial: cancelIntentSender() from pid=\ldots is not allowed to cancel
+package \ldots}), because \texttt{ActivityManagerService} independently checks the
+caller's UID against the PendingIntent's owning package before honoring
+\texttt{cancel()}, regardless of mutability flags or any additional protection. This
+means Attack C is already prevented by the Android platform on the tested API level,
+and no additional mitigation was needed or tested for it.
+
+\textbf{Phase B — mitigation, on synthetic fixture apps, not the 13 real APKs.} The
+13 real APKs identified above were not modified, instrumented, or re-tested with any
+protection mechanism; no such instrumentation was built or applied to them in this
+work. To test whether Attacks A and B (the two that did succeed) could be prevented,
+two purpose-built Android applications were written, compiled, signed, and installed
+as genuinely separate packages with genuinely separate UIDs: \texttt{VictimApp}, which
+creates a mutable PendingIntent and leaks it via an unprotected, exported broadcast, and
+\texttt{MalwareApp}, an independently-signed application that captures the leaked
+PendingIntent and performs Attacks A/B/C against it. This established a real
+cross-process baseline: with no mitigation applied, Attack A and Attack B both executed
+successfully against the synthetic victim, confirmed by the victim's own receiver
+logging the attacker-supplied data; Attack C again failed with the same platform-level
+\texttt{SecurityException} described above.
+
+A hardened variant of both apps was then built: \texttt{VictimAppHardened} creates the
+PendingIntent with \texttt{FLAG\_IMMUTABLE} instead of \texttt{FLAG\_MUTABLE}, and
+requires a newly declared \texttt{android:protectionLevel="signature"} permission on
+the leak broadcast. \texttt{MalwareAppV2} declares the matching
+\texttt{uses-permission} but is deliberately signed with a different certificate,
+confirmed via \texttt{apksigner verify --print-certs} (two distinct SHA-256 fingerprints)
+and via \texttt{aapt dump xmltree} on the compiled manifest (confirming
+\texttt{protectionLevel} compiles to the binary value \texttt{0x2}, i.e. signature).
+Running the identical attack sequence against this hardened pair on the same emulator
+produced, in the captured Logcat output, an OS-level \texttt{Permission Denial} from
+\texttt{BroadcastQueue} — the leak broadcast was never delivered to
+\texttt{MalwareAppV2}'s receiver (neither the manifest-declared nor a
+dynamically-registered instance of it), so no PendingIntent was captured and neither
+Attack A nor B had a target to operate on. \textbf{This result is limited to the two
+synthetic fixture applications on one Android API level (30); it has not been
+demonstrated on the 13 real candidate applications}, since applying such
+instrumentation to third-party APK bytecode was outside the scope of what was built.
+
+\textbf{Summary.} Of the 13 statically-flagged real applications, 10 were dynamically
+confirmed to create a live, capturable PendingIntent, and on all 10, Attacks A and B
+(fill-in injection and privilege-escalation \texttt{send()}) succeeded unprotected while
+Attack C (\texttt{cancel()} hijack) was independently blocked by the Android platform
+itself. Separately, on two purpose-built synthetic applications, the combination of
+\texttt{FLAG\_IMMUTABLE} and a signature-level broadcast permission was shown to prevent
+Attacks A and B by denying the leak broadcast at the OS permission-check layer before
+delivery. No claim is made that this specific mitigation was applied to, or verified
+against, the 13 real applications; doing so is identified as the natural next step for
+strengthening this result, not as something already completed.

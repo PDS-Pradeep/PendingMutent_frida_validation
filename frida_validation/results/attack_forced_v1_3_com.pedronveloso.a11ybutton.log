@@ -1,0 +1,16 @@
+Spawned `com.pedronveloso.a11ybutton`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 4770
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+[+] PendingIntent Forcer active, pid=4770
+{"timestamp":"2026-08-24T16:29:08.701Z","pid":4770,"event":"PI_CAPTURED","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null"}}
+{"timestamp":"2026-08-24T16:29:08.703Z","pid":4770,"event":"ATTACK_RESULTS","data":{"api":"getBroadcast","pendingIntent":"PendingIntent=null","results":[{"attack":"A_fillin_injection","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"},{"attack":"B_privilege_escalation","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"},{"attack":"C_cancel_hijack","api":"getBroadcast","status":"NULL_PENDING_INTENT","detail":"factory returned null - nothing to attack"}]}}
+{"timestamp":"2026-08-24T16:29:10.349Z","pid":4770,"event":"FORCER_INFO","data":{"detail":"forcing 1 call site(s) for com.pedronveloso.a11ybutton"}}
+{"timestamp":"2026-08-24T16:29:10.355Z","pid":4770,"event":"FORCE_ATTEMPT","data":{"package":"com.pedronveloso.a11ybutton","className":"com.pedronveloso.a11ybutton.work.ServiceCheckWorker","methodName":"c","status":"STATIC_CALL_FAILED","detail":"Error: expected a pointer"}}

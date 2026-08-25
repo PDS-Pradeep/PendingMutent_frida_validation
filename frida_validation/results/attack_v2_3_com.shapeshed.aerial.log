@@ -1,0 +1,15 @@
+Spawned `com.shapeshed.aerial`. Resuming main thread!
+==========================================
+[+] PendingIntent Attack Simulator
+[+] Target process: 11246
+==========================================
+[+] Hooked+attacking PendingIntent.getActivity
+[+] Hooked+attacking PendingIntent.getActivities
+[+] Hooked+attacking PendingIntent.getBroadcast
+[+] Hooked+attacking PendingIntent.getService
+[+] Hooked+attacking PendingIntent.getForegroundService
+[+] Attack simulator ready - attacks fire automatically on every PendingIntent creation
+{"timestamp":"2026-08-25T06:39:42.162Z","pid":11246,"event":"PI_CAPTURED","data":{"api":"getActivity","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10256 | targetPackage=com.shapeshed.aerial"}}
+{"timestamp":"2026-08-25T06:39:43.724Z","pid":11246,"event":"ATTACK_RESULTS","data":{"api":"getActivity","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10256 | targetPackage=com.shapeshed.aerial","results":[{"attack":"A_fillin_injection","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"D_flood_disruption","api":"getActivity","status":"COMPLETED","iterations":50,"executed":50,"exceptions":0,"elapsedMs":1356},{"attack":"E_redirect_probe","api":"getActivity","status":"EXECUTED_NO_EXCEPTION","detail":"redirect to nonexistent class did NOT throw - fillIn() likely IGNORED the component override (base Intent already had an explicit component); dispatch proceeded to the real, unchanged target - redirect NOT effective","redirectEffective":false}]}}
+{"timestamp":"2026-08-25T06:39:43.786Z","pid":11246,"event":"PI_CAPTURED","data":{"api":"getForegroundService","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10256 | targetPackage=com.shapeshed.aerial"}}
+{"timestamp":"2026-08-25T06:39:43.927Z","pid":11246,"event":"ATTACK_RESULTS","data":{"api":"getForegroundService","pendingIntent":"creatorPackage=com.shapeshed.aerial | creatorUid=10256 | targetPackage=com.shapeshed.aerial","results":[{"attack":"A_fillin_injection","api":"getForegroundService","status":"EXECUTED_NO_EXCEPTION","detail":"fill-in intent dispatched without SecurityException"},{"attack":"B_privilege_escalation","api":"getForegroundService","status":"EXECUTED_NO_EXCEPTION","detail":"send() succeeded from attacker context - delegated operation triggered"},{"attack":"D_flood_disruption","api":"getForegroundService","status":"COMPLETED","iterations":50,"executed":50,"exceptions":0,"elapsedMs":120},{"attack":"E_redirect_probe","api":"getForegroundService","status":"EXECUTED_NO_EXCEPTION","detail":"redirect to nonexistent class did NOT throw - fillIn() likely IGNORED the component override (base Intent already had an explicit component); dispatch proceeded to the real, unchanged target - redirect NOT effective","redirectEffective":false}]}}

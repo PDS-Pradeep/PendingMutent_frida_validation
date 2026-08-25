@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  VictimAppHardened - research/test fixture only.
+
+  Same scenario as VictimApp, but with the two mitigations Android actually
+  enforces at the OS/IPC layer, instead of any app-level "check who called
+  me" logic (which cannot work here - see README.md "Why in-receiver
+  ownership checks don't work").
+
+  Mitigation 1 - FLAG_IMMUTABLE
+    The PendingIntent is created with FLAG_IMMUTABLE (no FLAG_MUTABLE).
+    Android itself refuses to let a caller's fill-in Intent override the
+    action/data/component/categories on an immutable PendingIntent. This
+    blocks Attack A (fill-in injection) at the platform level - the
+    request never reaches SensitiveActionReceiver in a redirected form.
+
+  Mitigation 2 - signature-level permission on the leak broadcast
+    A new permission is declared with protectionLevel="signature". The
+    leak broadcast is sent via sendBroadcast(intent, permission) instead
+    of the bare unprotected sendBroadcast(intent) VictimApp used. Android's
+    PackageManager will only grant a signature-level permission to another
+    app if that app is signed with the SAME certificate as the app that
+    declared the permission. MalwareApp (signed with a different key) can
+    declare <uses-permission> for it, but will never be granted it, so its
+    receiver is skipped entirely by the OS at delivery time - it never even
+    reaches PiCaptureReceiver.onReceive(). No capture -> attacks B and C
+    have nothing to operate on either.
+
+  This is the actual point being demonstrated: prevention has to happen at
+  permission/IPC boundaries Android enforces, not inside the receiver.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.research.pivictimhardened">
+
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30" />
+
+    <!-- Only an app signed with the SAME certificate as this APK can ever
+         be granted this permission by PackageManager. -->
+    <permission
+        android:name="com.research.pivictimhardened.permission.RECEIVE_PI_LEAK"
+        android:protectionLevel="signature" />
+
+    <application
+        android:label="PI Victim Hardened (research)"
+        android:allowBackup="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".SensitiveActionReceiver"
+            android:exported="false" />
+
+    </application>
+</manifest>
